@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, Main2Activity.class);
+
+                int value = 123;
+                intent.putExtra("key",value);
+
                 startActivity(intent);
                 MainActivity.this.finish();
             }
