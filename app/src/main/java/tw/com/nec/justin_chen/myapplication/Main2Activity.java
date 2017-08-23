@@ -26,6 +26,14 @@ public class Main2Activity extends AppCompatActivity {
         textView.setText("Name: "+name+" & Height: "+height);
 
 
+        Intent intent = new Intent();
+        bundle.putString("company","nec");
+        intent.putExtra("key2",bundle);
+
+        int resultCode = 0;
+        setResult(resultCode,intent);
+        finish();
+
         button = (Button)findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
