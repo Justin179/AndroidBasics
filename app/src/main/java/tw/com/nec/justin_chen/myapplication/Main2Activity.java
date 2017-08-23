@@ -18,9 +18,12 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        int numbers = getIntent().getExtras().getInt("key");
+        Bundle bundle = getIntent().getExtras().getBundle("key");
+        String name = bundle.getString("name");
+        String height = String.valueOf(bundle.getInt("height"));
+
         textView = (TextView)findViewById(R.id.textView2);
-        textView.setText(String.valueOf(numbers));
+        textView.setText("Name: "+name+" & Height: "+height);
 
 
         button = (Button)findViewById(R.id.button2);

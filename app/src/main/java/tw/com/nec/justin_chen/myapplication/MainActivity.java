@@ -23,8 +23,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, Main2Activity.class);
 
-                int value = 123;
-                intent.putExtra("key",value);
+                // 資料
+                String name = "Justin";
+                int height = 179;
+
+                // 資料放物件
+                Bundle bundle = new Bundle();
+                bundle.putString("name",name);
+                bundle.putInt("height",height);
+
+                // 物件放intent
+                intent.putExtra("key",bundle);
 
                 startActivity(intent);
                 MainActivity.this.finish();
